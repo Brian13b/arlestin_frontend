@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { Droplet, Lock, Phone, MessageCircle } from 'lucide-react';
+import { BotonInstalar } from '../../components/ui/BotonInstalar';
 
 export const Login = () => {
   const { login, user } = useContext(AuthContext); 
@@ -105,6 +106,12 @@ export const Login = () => {
           <button onClick={handlePedirPorWhatsApp} className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-4 rounded-2xl transition-all shadow-md active:scale-95 disabled:opacity-70 mt-4 text-xl tracking-wide">
             ¿No tenés PIN? Contactanos.
           </button>
+
+          <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col items-center">
+            <p className="text-[11px] text-secondary font-bold uppercase tracking-widest mb-3">Mejorá tu experiencia</p>
+            <BotonInstalar />
+          </div>
+
         </div>
       </div>
       
